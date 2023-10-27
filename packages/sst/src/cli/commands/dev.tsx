@@ -452,6 +452,7 @@ export const dev = (program: Program) =>
             mod.useKyselyTypeGenerator()
           ),
           import("./plugins/warmer.js").then((mod) => mod.useRDSWarmer()),
+          import("./plugins/diagram.js").then((mod) => mod.useDiagramGenerator()),
           useFunctionLogger(),
         ]);
       } catch (e: any) {
